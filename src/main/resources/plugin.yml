@@ -1,0 +1,7 @@
+name: OpenShulker
+version: '${version}'
+
+main: mc506lw.openShulker.OpenShulker
+api-version: '26.1.2'
+folia-supported: true
+load: POSTWORLD
