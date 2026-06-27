@@ -69,7 +69,7 @@ public final class OpenShulker extends JavaPlugin implements Listener {
 
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent event) {
-        if (event.getAction() != Action.RIGHT_CLICK_AIR && event.getAction() != Action.RIGHT_CLICK_BLOCK) {
+        if (event.getAction() != Action.RIGHT_CLICK_AIR) {
             return;
         }
 
@@ -77,11 +77,6 @@ public final class OpenShulker extends JavaPlugin implements Listener {
         ItemStack item = event.getItem();
 
         if (item == null || !isShulkerBox(item.getType())) {
-            return;
-        }
-
-        // Sneaking allows normal placement or block interaction
-        if (player.isSneaking()) {
             return;
         }
 
